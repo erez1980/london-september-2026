@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>חמישה לילות בלונדון · 1–6.9.2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Suez+One&family=Frank+Ruhl+Libre:wght@300;400;500;700&family=Assistant:wght@200;300;400;600&family=Heebo:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#120609;
+  --wine:#25090F;
+  --oxblood:#781A34;
+  --plum:#2B1220;
+  --gold:#C6A15B;
+  --gold-dim:#D7B36D;
+  --rose:#D9908C;
+  --ivory:#FFF7EF;
+  --muted:#DECFC8;
+  --hair:rgba(226,191,120,.38);
+  --serif:"Frank Ruhl Libre",Georgia,serif;
+  --sans:"Assistant","Heebo",system-ui,sans-serif;
+  --lat:"Cormorant Garamond",Georgia,serif;
+  --util:"Heebo",system-ui,sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--ink);color:var(--ivory);
+  font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.75;
+  -webkit-font-smoothing:antialiased;
+}
+body::before{
+  content:"";position:fixed;inset:0;pointer-events:none;z-index:0;
+  background:
+    radial-gradient(60vw 60vw at 78% 8%, rgba(74,14,30,.55), transparent 62%),
+    radial-gradient(48vw 48vw at 12% 42%, rgba(43,18,32,.6), transparent 65%),
+    radial-gradient(70vw 40vw at 50% 108%, rgba(198,161,91,.10), transparent 70%);
+  animation:breathe 11s ease-in-out infinite;
+}
+@keyframes breathe{0%,100%{opacity:.85}50%{opacity:1}}
+.wrap{position:relative;z-index:1;max-width:860px;margin:0 auto;padding:0 22px 90px}
+
+/* ---------- bar ---------- */
+.bar{
+  position:sticky;top:0;z-index:20;
+  display:flex;align-items:center;justify-content:space-between;gap:14px;
+  padding:12px 22px;margin:0 -22px 0;
+  background:rgba(18,6,9,.82);backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--hair);
+}
+.bar .mark{font-family:var(--util);font-size:11px;letter-spacing:.34em;color:var(--gold-dim)}
+.toggle{
+  display:inline-flex;align-items:center;gap:9px;cursor:pointer;
+  font-family:var(--util);font-size:11.5px;letter-spacing:.14em;color:var(--muted);
+  background:none;border:1px solid var(--hair);border-radius:999px;padding:6px 13px;
+  transition:color .3s,border-color .3s;
+}
+.toggle:hover,.toggle:focus-visible{color:var(--gold);border-color:var(--gold-dim)}
+.toggle .dot{width:7px;height:7px;border-radius:50%;background:var(--gold-dim);transition:background .3s,box-shadow .3s}
+body.discreet .toggle .dot{background:var(--rose);box-shadow:0 0 9px var(--rose)}
+body.discreet .toggle{color:var(--rose);border-color:rgba(217,144,140,.4)}
+
+/* ---------- hero ---------- */
+.hero{padding:88px 0 64px;border-bottom:1px solid var(--hair)}
+.eyebrow{font-family:var(--util);font-size:11.5px;letter-spacing:.4em;color:var(--gold-dim);margin:0 0 26px}
+.hero h1{
+  font-family:"Suez One",var(--serif);font-weight:400;
+  font-size:clamp(46px,12vw,92px);line-height:.94;margin:0;color:var(--ivory);
+  letter-spacing:-.01em;
+}
+.hero h1 em{font-style:normal;color:var(--oxblood);-webkit-text-stroke:1px var(--gold-dim);display:block}
+.hero .sub{margin:30px 0 0;max-width:44ch;color:var(--muted);font-size:18px;font-weight:400}
+.flights{
+  display:flex;flex-wrap:wrap;gap:0;margin:38px 0 0;
+  border-top:1px solid var(--hair);border-bottom:1px solid var(--hair);
+}
+.flights div{flex:1 1 160px;padding:16px 0}
+.flights div + div{border-right:1px solid var(--hair);padding-right:20px}
+.flights dt{font-family:var(--util);font-size:10.5px;letter-spacing:.28em;color:var(--gold-dim);margin:0 0 6px}
+.flights dd{margin:0;font-family:var(--serif);font-size:19px;color:var(--ivory)}
+
+/* ---------- day ---------- */
+.day{padding:64px 0;border-bottom:1px solid var(--hair)}
+.dayhead{display:flex;align-items:baseline;gap:16px;flex-wrap:wrap;margin-bottom:6px}
+.daynum{
+  font-family:var(--lat);font-style:italic;font-size:46px;line-height:1;
+  color:var(--gold-dim);opacity:.75;
+}
+.day h2{font-family:var(--serif);font-weight:500;font-size:31px;margin:0;color:var(--ivory)}
+.mood{
+  font-family:var(--lat);font-style:italic;font-size:20px;color:var(--rose);
+  margin:2px 0 30px;opacity:.9;
+}
+.slot{display:grid;grid-template-columns:70px 1fr;gap:18px;padding:17px 0;border-top:1px solid rgba(198,161,91,.11)}
+.slot:first-of-type{border-top:none}
+.time{font-family:var(--util);font-size:12.5px;letter-spacing:.1em;color:var(--gold);padding-top:6px}
+.slot h3{margin:0 0 4px;font-family:var(--serif);font-weight:500;font-size:19px;color:var(--ivory)}
+.slot p{margin:0;color:var(--muted);font-size:15.5px;line-height:1.68;font-weight:400}
+.lat{font-family:var(--lat);font-style:italic;font-size:1.09em;color:var(--ivory)}
+.slot h3 .lat{font-style:italic}
+
+/* ---------- feature: saturday ---------- */
+.feature{
+  margin:64px 0;padding:44px 32px;
+  background:linear-gradient(160deg,var(--oxblood),var(--plum) 78%);
+  border:1px solid rgba(198,161,91,.3);position:relative;
+}
+.feature::after{
+  content:"";position:absolute;inset:9px;border:1px solid rgba(198,161,91,.16);pointer-events:none;
+}
+.feature .daynum{color:var(--gold);opacity:.9}
+.feature h2{color:var(--ivory)}
+.feature .mood{color:var(--gold)}
+.feature .slot{border-top-color:rgba(198,161,91,.2)}
+.feature .slot p{color:rgba(255,247,239,.88)}
+.feature .time{color:var(--gold)}
+
+/* ---------- redaction ---------- */
+[data-private]{transition:filter .45s ease,opacity .45s ease}
+body.discreet [data-private]{filter:blur(6px);opacity:.42;user-select:none}
+body.discreet [data-private] a{pointer-events:none}
+.notice{
+  display:none;margin:0 0 26px;padding:13px 18px;border:1px dashed rgba(217,144,140,.45);
+  font-family:var(--util);font-size:12.5px;letter-spacing:.08em;color:var(--rose);
+}
+body.discreet .notice{display:block}
+
+/* ---------- checklist ---------- */
+.panel{margin:56px 0 0;padding:34px 28px;border:1px solid var(--hair);background:rgba(43,18,32,.4)}
+.panel h2{font-family:var(--serif);font-weight:500;font-size:25px;margin:0 0 4px}
+.panel .lead{color:var(--muted);font-size:15.5px;margin:0 0 24px}
+.check{list-style:none;margin:0;padding:0}
+.check li{border-top:1px solid rgba(198,161,91,.13)}
+.check li:first-child{border-top:none}
+.check label{display:flex;gap:14px;align-items:flex-start;padding:13px 0;cursor:pointer}
+.check input{
+  appearance:none;flex:0 0 17px;width:17px;height:17px;margin-top:5px;
+  border:1px solid var(--gold-dim);border-radius:2px;cursor:pointer;position:relative;transition:.25s;
+}
+.check input:checked{background:var(--gold);border-color:var(--gold)}
+.check input:checked::after{
+  content:"";position:absolute;inset:0;margin:auto;width:5px;height:9px;
+  border:solid var(--ink);border-width:0 1.5px 1.5px 0;transform:rotate(45deg) translate(-1px,-1px);
+}
+.check input:focus-visible{outline:2px solid var(--rose);outline-offset:3px}
+.check .txt{font-size:15.5px;color:var(--ivory);transition:.3s}
+.check .txt small{display:block;color:var(--muted);font-size:13.5px;margin-top:2px}
+.check input:checked ~ .txt{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--gold-dim)}
+
+/* ---------- notes ---------- */
+.notes{margin:56px 0 0}
+.notes h2{font-family:var(--serif);font-weight:500;font-size:25px;margin:0 0 20px}
+.note{padding:18px 0;border-top:1px solid rgba(198,161,91,.13)}
+.note b{display:block;font-family:var(--util);font-size:11px;letter-spacing:.24em;color:var(--gold-dim);margin-bottom:7px;font-weight:500}
+.note p{margin:0;color:var(--muted);font-size:15.5px;font-weight:400}
+footer{margin-top:70px;padding-top:26px;border-top:1px solid var(--hair);font-family:var(--util);font-size:11.5px;letter-spacing:.22em;color:var(--gold-dim);text-align:center}
+
+@media (max-width:620px){
+  body{font-size:16px}
+  .slot{grid-template-columns:56px 1fr;gap:13px}
+  .time{font-size:11.5px}
+  .feature{padding:32px 20px;margin-inline:-4px}
+  .panel{padding:26px 20px}
+  .flights div + div{padding-right:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  html{scroll-behavior:auto}
+}
+
+/* ---------- entry gate ---------- */
+body.locked{overflow:hidden}
+.access-gate{position:fixed;inset:0;z-index:100;display:grid;place-items:center;padding:22px;background:radial-gradient(70vw 70vw at 50% 10%,rgba(120,26,52,.6),transparent 64%),var(--ink)}
+.gate-card{width:min(100%,460px);padding:38px 30px;border:1px solid var(--hair);background:rgba(43,18,32,.92);box-shadow:0 24px 90px rgba(0,0,0,.44);text-align:center}
+.gate-mark{font-family:var(--util);font-size:11px;letter-spacing:.32em;color:var(--gold);margin:0 0 18px}
+.gate-card h1{font-family:var(--serif);font-size:38px;font-weight:500;line-height:1.1;margin:0;color:var(--ivory)}
+.gate-card p{margin:14px 0 24px;color:var(--muted);font-weight:400}
+.gate-form{display:flex;gap:10px;justify-content:center}
+.gate-form input{width:150px;padding:12px 14px;border:1px solid var(--gold-dim);border-radius:0;background:rgba(18,6,9,.72);color:var(--ivory);font:500 17px var(--util);letter-spacing:.18em;text-align:center;outline:none}
+.gate-form input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,161,91,.16)}
+.gate-form button{border:1px solid var(--gold);background:var(--gold);color:var(--ink);padding:11px 17px;font:600 14px var(--util);cursor:pointer}
+.gate-error{min-height:1.5em;margin:12px 0 0;color:#ffb9b5;font-size:14px}
+body.locked .wrap{visibility:hidden}
+@media(max-width:430px){.gate-card{padding:32px 22px}.gate-form{flex-direction:column}.gate-form input{width:100%}}
+
+</style>
+</head>
+<body class="locked">
+<section class="access-gate" id="accessGate" aria-labelledby="gateTitle">
+ <div class="gate-card">
+  <p class="gate-mark">LONDON · 01–06.09.26</p>
+  <h1 id="gateTitle">חמישה לילות בלונדון</h1>
+  <p>הזינו את סיסמת הפתיחה כדי לפתוח את המסלול.</p>
+  <form class="gate-form" id="gateForm">
+   <input id="gatePassword" type="password" inputmode="numeric" autocomplete="off" aria-label="סיסמת פתיחה" placeholder="סיסמה" required>
+   <button type="submit">פתיחה</button>
+  </form>
+  <p class="gate-error" id="gateError" role="alert"></p>
+ </div>
+</section>
+<main class="wrap" id="siteContent" aria-hidden="true">
+
+<div class="bar">
+  <span class="mark">LONDON · 01–06.09.26</span>
+  <button class="toggle" id="dscr" aria-pressed="false"><span class="dot"></span><span id="dscrTxt">מצב דיסקרטי</span></button>
+</div>
+
+<header class="hero">
+  <p class="eyebrow">1–6 בספטמבר 2026 · לזוג</p>
+  <h1>חמישה לילות<em>בלונדון</em></h1>
+  <p class="sub">בלי מוזיאונים. בלי תורים. בלי שום דבר שכבר ראיתם. עיר אחרת לגמרי מזו שביקרתם בה קודם — כזו שנפתחת רק אחרי החשכה.</p>
+  <dl class="flights">
+    <div><dt>נחיתה</dt><dd>שלישי 1.9 · 16:00</dd></div>
+    <div><dt>המראה חזרה</dt><dd>ראשון 6.9 · בוקר</dd></div>
+    <div><dt>בסיס</dt><dd>Fitzrovia / Soho</dd></div>
+  </dl>
+</header>
+
+<p class="notice">מצב דיסקרטי פעיל — התוכן הרגיש מטושטש. אפשר לפתוח את הדף במטוס.</p>
+
+<!-- TUE -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">i</span><h2>שלישי · 1 בספטמבר</h2></div>
+  <p class="mood">Landing softly.</p>
+
+  <div class="slot"><div class="time">16:00</div><div>
+    <h3>נחיתה</h3>
+    <p>במלון בערך ב-18:15. אל תתכננו יותר מזה — יום ראשון בעיר לא צריך להיות עמוס.</p></div></div>
+
+  <div class="slot"><div class="time">20:00</div><div>
+    <h3>ארוחה · <span class="lat">Andrew Edmunds</span></h3>
+    <p>בית טאון מהמאה ה-18 בסוהו. נרות, שולחנות צמודים, תפריט כתוב ביד, אפס תיירים. חובה להזמין הרבה מראש.</p></div></div>
+
+  <div class="slot"><div class="time">22:30</div><div>
+    <h3>לילה · <span class="lat">Swift Soho</span></h3>
+    <p>יורדים למרתף החשוך — ג'אז חי ווויסקי. אלטרנטיבה: <span class="lat">Bar Termini</span>, עשרים מקומות סה״כ והנגרוני הכי טוב בעיר.</p></div></div>
+</section>
+
+<!-- WED -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">ii</span><h2>רביעי · 2 בספטמבר</h2></div>
+  <p class="mood">Green by day, candlelit by night.</p>
+
+  <div class="slot"><div class="time">11:00</div><div>
+    <h3><span class="lat">Hampstead Pergola &amp; Hill Garden</span></h3>
+    <p>קולונדה אדוארדיאנית שהצמחייה בלעה, כמעט תמיד ריקה. אחת הפינות הרומנטיות בעיר ואף תייר לא מגיע אליה.</p></div></div>
+
+  <div class="slot"><div class="time">13:00</div><div>
+    <h3><span class="lat">Hampstead Heath</span> · בריכות</h3>
+    <p>שחייה בבריכות הפתוחות — ספטמבר עדיין נעים. צהריים ב-<span class="lat">The Holly Bush</span>, פאב מ-1807 בסמטה.</p></div></div>
+
+  <div class="slot" data-private><div class="time">18:00</div><div>
+    <h3><span class="lat">AIRE Ancient Baths</span></h3>
+    <p>מרתף ג'ורג'יאני מואר נרות מתחת לקובנט גארדן: אמבט חם, קר, פושר, אמבט אלף הסילונים, חדר אדים, ולבסוף ציפה באמבט מלח. טלפונים אסורים לחלוטין. קחו <span class="lat">Couples Escape</span> עם עיסוי זוגי באותו חדר.</p></div></div>
+
+  <div class="slot"><div class="time">21:30</div><div>
+    <h3>ארוחה · <span class="lat">Cora Pearl</span></h3>
+    <p>קרוב, וקרוי על שם קורטיזנה ויקטוריאנית. אחרי המים זה בדיוק הטון הנכון.</p></div></div>
+
+  <div class="slot"><div class="time">23:00</div><div>
+    <h3><span class="lat">Nightjar</span></h3>
+    <p>ג'אז חי במרתף בשורדיץ', פעמון בדלת. או <span class="lat">Evans &amp; Peel</span> — נכנסים דרך משרד חקירות, מציגים תיק, והקיר נפתח.</p></div></div>
+</section>
+
+<!-- THU -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">iii</span><h2>חמישי · 3 בספטמבר</h2></div>
+  <p class="mood">On the water, then underground.</p>
+
+  <div class="slot"><div class="time">11:00</div><div>
+    <h3><span class="lat">GoBoat</span> · תעלת ריג'נט</h3>
+    <p>סירה חשמלית פרטית לשעתיים מ-<span class="lat">Kingsland Basin</span>. אתם הקברניטים, בקבוק ופיקניק על הסיפון, שטים דרך <span class="lat">Victoria Park</span>. בלי מדריך ובלי קבוצה.</p></div></div>
+
+  <div class="slot"><div class="time">14:00</div><div>
+    <h3>צהריים · <span class="lat">Café Cecilia</span></h3>
+    <p>על התעלה. או <span class="lat">Bistrotheque</span> — דלת לא מסומנת במחסן בבת'נל גרין.</p></div></div>
+
+  <div class="slot"><div class="time">20:00</div><div>
+    <h3><span class="lat">Sessions Arts Club</span></h3>
+    <p>אולם נשפים מתקלף בקומה העליונה של בית משפט נטוש בקלרקנוול. תקרות גבוהות, טיח נושר, אור נרות. אחד החללים היפים בלונדון.</p></div></div>
+
+  <div class="slot" data-private><div class="time">23:00</div><div>
+    <h3>אופציה ללילה</h3>
+    <p>לא לחזור ל-<span class="lat">Le Boudoir</span> — זה אותו מקום של מוצ״ש, ובחמישי היחס פחות טוב לזוגות. אם בכל זאת רוצים משהו: <span class="lat">The Fox Den</span>, ארוחת ערב הדוניסטית ל-24 אורחים עם שף פרטי, או <span class="lat">KK Cabaret</span> של <span class="lat">Killing Kittens</span>. שניהם בהרשמה מראש.</p></div></div>
+</section>
+
+<!-- FRI -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">iv</span><h2>שישי · 4 בספטמבר</h2></div>
+  <p class="mood">Slow burn. Save something for tomorrow.</p>
+
+  <div class="slot" data-private><div class="time">11:00</div><div>
+    <h3><span class="lat">Coco de Mer</span> · <span class="lat">Monmouth St</span></h3>
+    <p>הבוטיק הארוטי האייקוני של לונדון. אפשר לקבוע התאמה פרטית. משם סמטאות סוהו ובר הוויסקי הסודי במרתף <span class="lat">Milroy's</span>.</p></div></div>
+
+  <div class="slot"><div class="time">19:00</div><div>
+    <h3>שקיעה · <span class="lat">Forza Wine</span>, פקהאם</h3>
+    <p>גג עם נוף לסקייליין, יין טבעי, קהל מקומי לגמרי. השקיעה בערך 19:40 — תגיעו לפני.</p></div></div>
+
+  <div class="slot"><div class="time">20:45</div><div>
+    <h3>ארוחה · <span class="lat">Kudu</span></h3>
+    <p>או <span class="lat">Levan</span>. שניהם בטווח הליכה מהגג.</p></div></div>
+
+  <div class="slot"><div class="time">23:00</div><div>
+    <h3>מופע מאוחר · <span class="lat">Ronnie Scott's</span></h3>
+    <p>הסט המאוחר, לא המוקדם. חדר קטן וחשוך, וזו הדרך הנכונה לסיים את הערב שלפני.</p></div></div>
+</section>
+
+<!-- SAT — feature -->
+<section class="day feature" data-private>
+  <div class="dayhead"><span class="daynum">v</span><h2>מוצ״ש · 5 בספטמבר</h2></div>
+  <p class="mood">The night the whole trip was built around.</p>
+
+  <div class="slot"><div class="time">12:30</div><div>
+    <h3>בראנץ' · <span class="lat">Bistrotheque</span></h3>
+    <p>בראנץ' דראג של סוף שבוע. קליל, קאמפי, מכניס למצב רוח בלי לשרוף אנרגיה.</p></div></div>
+
+  <div class="slot"><div class="time">15:00</div><div>
+    <h3>מנוחה מלאה</h3>
+    <p>לא סעיף מיותר. הטעות הנפוצה של זוגות בטיול היא להגיע שחוקים מיום על הרגליים ולהתרוקן בדיוק כשהערב מתחיל.</p></div></div>
+
+  <div class="slot"><div class="time">19:15</div><div>
+    <h3>ארוחה קלה · <span class="lat">Som Saa</span></h3>
+    <p>או <span class="lat">Gunpowder</span> בספיטלפילדס. צלחות קטנות בלבד, כוס אחת. בטן מלאה = ערב מבוזבז.</p></div></div>
+
+  <div class="slot"><div class="time">21:00</div><div>
+    <h3>כוס אחת · <span class="lat">Discount Suit Company</span></h3>
+    <p>בר קוקטיילים במרתף של חנות חייטים ישנה ב-<span class="lat">Wentworth St</span>. חמש דקות הליכה מהמועדון — בדיוק המעבר הנכון.</p></div></div>
+
+  <div class="slot"><div class="time">21:45</div><div>
+    <h3><span class="lat">Le Boudoir Club</span> · <span class="lat">KISS</span></h3>
+    <p>ליד <span class="lat">Aldgate East</span>. שלוש קומות, ערב זוגות בלבד, £90 לזוג, 21:30–03:00. הטלפונים נלקחים בכניסה. יש דנג'ן פעיל ודמות בית בשם <span class="lat">Master Boudoir</span> שנותנת למגיעים חדשים תדריך. הגיעו מוקדם — האווירה שם נבנית לאט, ומי שנופל פנימה ב-00:30 נכנס ישר לשיא.</p></div></div>
+
+  <div class="slot"><div class="time">03:00</div><div>
+    <h3>לישון קרוב</h3>
+    <p>שקלו לישון את הלילה הזה במזרח לונדון. <span class="lat">Leman Locke</span> נמצא ממש על אותו רחוב. לצאת ולהיות במיטה תוך חמש דקות זה הבדל אמיתי אחרי ערב כזה.</p></div></div>
+</section>
+
+<!-- SUN -->
+<section class="day">
+  <div class="dayhead"><span class="daynum">vi</span><h2>ראשון · 6 בספטמבר</h2></div>
+  <p class="mood">Out before the city wakes.</p>
+
+  <div class="slot"><div class="time">07:00</div><div>
+    <h3>עזיבה</h3>
+    <p>אם ההמראה בבוקר, זה כל היום. אם התפנו שעתיים — <span class="lat">Columbia Road Flower Market</span> נפתח ב-08:00, ריק ומדהים בשעה הזו, וקרואסון בדרך.</p></div></div>
+</section>
+
+<!-- CHECKLIST -->
+<section class="panel">
+  <h2>לפני שטסים</h2>
+  <p class="lead">כמעט הכל ברשימה הזו נסגר שבועות מראש. סמנו תוך כדי.</p>
+  <ul class="check">
+    <li><label><input type="checkbox"><span class="txt">חברות ב-<span class="lat">Le Boudoir</span> — מאושרת בפועל<small>לא רק "נרשמנו". ודאו שקיבלתם אישור לפני שאתם עולים למטוס.</small></span></label></li>
+    <li><label><input type="checkbox"><span class="txt">מייל למועדון<small>פורמט הערב ב-5/9 · הזמנה מראש או דלת · BYOB או בר · קוד לבוש מדויק</small></span></label></li>
+    <li><label><input type="checkbox"><span class="txt">דרכונים<small>משמשים שם כהוכחת גיל וכתובת. רישיון ישראלי לא יעבוד.</small></span></label></li>
+    <li><label><input type="checkbox"><span class="txt">תלבושות לערב<small>זה לא פטיש — זה קוקטייל־גלאם. ג'ינס נפסל.</small></span></label></li>
+    <li><label><input type="checkbox"><span class="txt">הזמנת <span class="lat">AIRE Ancient Baths</span> — <span class="lat">Couples Escape</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt">שולחנות: <span class="lat">Andrew Edmunds</span> · <span class="lat">Sessions Arts Club</span> · <span class="lat">Som Saa</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt">סירה: <span class="lat">GoBoat</span>, שעתיים</span></label></li>
+    <li><label><input type="checkbox"><span class="txt">מזומן ליטרה<small>חלק מהמקומות גובים כניסה או פיקדון במזומן בלבד.</small></span></label></li>
+    <li><label><input type="checkbox"><span class="txt">שיחה אחת לפני הדלת<small>מה כן, מה לא, ומילת קוד לעצירה. אחד אומר לא — שנינו יוצאים.</small></span></label></li>
+  </ul>
+</section>
+
+<!-- NOTES -->
+<section class="notes">
+  <h2>הערות שוליים</h2>
+
+  <div class="note"><b>הטלפונים</b>
+  <p>במועדון הם נלקחים בכניסה. סכמו מראש נקודת מפגש קבועה — הבר — ושעה עגולה שבה אתם שם בכל מקרה. זוגות שלא עושים את זה מבזבזים חצי שעה בחיפושים בין שלוש קומות.</p></div>
+
+  <div class="note" data-private><b>ליל שישי · מה בדקתי</b>
+  <p><span class="lat">Crossbreed</span> נסגר סופית ב-2022 ולא קיים יותר. ל-<span class="lat">Klub Verboten</span> אין שום דבר מפורסם ל-4/9, ואנחנו קרובים מספיק לתאריך כדי להניח שלא יהיה. <span class="lat">Torture Garden</span> הבא הוא ב-20 בספטמבר, שבועיים אחריכם. לכן שישי נשאר ערב זוגי ואיטי — וזה ממילא עדיף לפני מוצ״ש.</p></div>
+
+  <div class="note"><b>מזג אוויר</b>
+  <p>בערך 21° ביום, 14° בלילה. ז'קט קל לערבים, ונעליים שאפשר ללכת בהן — הרבה מהתוכנית היא הליכה בין שכונות.</p></div>
+
+  <div class="note"><b>מה עוד יכול להשתנות</b>
+  <p>לוחות אירועים בסצנה הזו נסגרים מאוחר. שווה מבט ב-<span class="lat">dice.fm</span>, ב-<span class="lat">ra.co</span> ובאינסטגרם של המועדונים בשבוע שלפני.</p></div>
+</section>
+
+<footer>ARRIVE EARLY · STAY LATE · TELL NO ONE</footer>
+
+</main>
+
+<script>
+(function(){
+ var gate=document.getElementById('accessGate'),form=document.getElementById('gateForm'),password=document.getElementById('gatePassword'),error=document.getElementById('gateError'),content=document.getElementById('siteContent');
+ form.addEventListener('submit',function(e){e.preventDefault();if(password.value==='2503'){document.body.classList.remove('locked');gate.hidden=true;content.setAttribute('aria-hidden','false');password.value='';}else{error.textContent='הסיסמה אינה נכונה.';password.select();}});
+ password.focus();
+  var btn=document.getElementById('dscr'),txt=document.getElementById('dscrTxt'),t=document.title;
+  btn.addEventListener('click',function(){
+    var on=document.body.classList.toggle('discreet');
+    btn.setAttribute('aria-pressed',on?'true':'false');
+    txt.textContent=on?'מצב גלוי':'מצב דיסקרטי';
+    document.title=on?'London — notes':t;
+  });
+})();
+</script>
+</body>
+</html>
