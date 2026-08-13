@@ -183,6 +183,13 @@ body.locked{overflow:hidden}
 .gate-form input:focus{border-color:var(--gold);box-shadow:0 0 0 3px rgba(198,161,91,.16)}
 .gate-form button{border:1px solid var(--gold);background:var(--gold);color:var(--ink);padding:11px 17px;font:600 14px var(--util);cursor:pointer}
 .gate-error{min-height:1.5em;margin:12px 0 0;color:#ffb9b5;font-size:14px}
+.splash-layer{position:fixed;inset:0;z-index:150;overflow:hidden;pointer-events:none}
+.splash-drop{position:absolute;top:var(--y);left:var(--x);width:var(--s);height:var(--s);border-radius:50%;background:var(--c);box-shadow:0 0 calc(var(--s) * .45) var(--c);transform:translate(-50%,-50%) scale(.15);animation:splashOut var(--d) cubic-bezier(.16,.72,.22,1) forwards}
+.splash-layer.wrong .splash-drop{animation-name:wrongDrop;animation-delay:var(--delay)}
+.splash-layer.right::before{content:"";position:absolute;inset:-25%;background:radial-gradient(circle at 50% 52%,rgba(255,245,238,.98) 0 2%,rgba(255,183,193,.86) 8%,rgba(217,102,131,.6) 19%,transparent 46%);animation:burst 1.2s ease-out forwards}
+@keyframes splashOut{0%{transform:translate(-50%,-50%) scale(.08);opacity:0}15%{opacity:1}100%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(1);opacity:0}}
+@keyframes wrongDrop{0%{transform:translate(-50%,-50%) scale(.1);opacity:0}15%{opacity:1}48%{transform:translate(calc(-50% + var(--dx)),calc(-50% + var(--dy))) scale(.9);opacity:1}100%{transform:translate(calc(-50% + var(--dx)),110vh) scale(.7);opacity:0}}
+@keyframes burst{0%{transform:scale(.15);opacity:0}12%{opacity:1}100%{transform:scale(1.7);opacity:0}}
 body.locked .wrap{visibility:hidden}
 @media(max-width:430px){.gate-card{padding:32px 22px}.gate-form{flex-direction:column}.gate-form input{width:100%}}
 
@@ -390,7 +397,8 @@ body.locked .wrap{visibility:hidden}
 <script>
 (function(){
  var gate=document.getElementById('accessGate'),form=document.getElementById('gateForm'),password=document.getElementById('gatePassword'),error=document.getElementById('gateError'),content=document.getElementById('siteContent');
- form.addEventListener('submit',function(e){e.preventDefault();if(password.value==='2503'){document.body.classList.remove('locked');gate.hidden=true;content.setAttribute('aria-hidden','false');password.value='';}else{error.textContent='הסיסמה אינה נכונה.';password.select();}});
+ function splash(kind){var layer=document.createElement('div'),count=kind==='right'?82:28,colors=kind==='right'?['#fff7ef','#ffd7d9','#f5a7b6','#d96683']:['#ffb9b5','#d96683','#8f1d3d'];layer.className='splash-layer '+kind;for(var i=0;i<count;i++){var drop=document.createElement('i'),a=Math.random()*Math.PI*2,r=(kind==='right'?Math.random()*56+8:Math.random()*38+6),size=(kind==='right'?Math.random()*26+7:Math.random()*17+5);drop.className='splash-drop';drop.style.cssText='--x:50%;--y:52%;--s:'+size+'px;--c:'+colors[i%colors.length]+';--dx:'+(Math.cos(a)*r)+'vw;--dy:'+(Math.sin(a)*r)+'vh;--d:'+(kind==='right'?900+Math.random()*500:1400+Math.random()*800)+'ms;--delay:'+(Math.random()*170)+'ms';layer.appendChild(drop)}document.body.appendChild(layer);setTimeout(function(){layer.remove()},kind==='right'?1350:2500)}
+ form.addEventListener('submit',function(e){e.preventDefault();if(password.value==='2503'){form.querySelector('button').disabled=true;splash('right');setTimeout(function(){document.body.classList.remove('locked');gate.hidden=true;content.setAttribute('aria-hidden','false');password.value='';form.querySelector('button').disabled=false},1050)}else{error.textContent='הסיסמה אינה נכונה.';splash('wrong');password.select();}});
  password.focus();
   var btn=document.getElementById('dscr'),txt=document.getElementById('dscrTxt'),t=document.title;
   btn.addEventListener('click',function(){
