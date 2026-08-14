@@ -210,6 +210,9 @@ body.locked .wrap{visibility:hidden}
 body[data-theme="neon"]{--ink:#0c0920;--wine:#171047;--oxblood:#be0065;--plum:#21165a;--gold:#37e5f5;--gold-dim:#c97bff;--rose:#ff78c9;--ivory:#fff7ff;--muted:#e4d3f2;--hair:rgba(56,225,255,.4)}body[data-theme="underground"]{--ink:#111313;--wine:#29251d;--oxblood:#8f2630;--plum:#202839;--gold:#f6c956;--gold-dim:#e9b73b;--rose:#ee7e71;--ivory:#fff8e8;--muted:#e2d8c5;--hair:rgba(246,201,86,.4)}body[data-theme="cinematic"]{--ink:#12101c;--wine:#321b31;--oxblood:#9d3f5f;--plum:#26233b;--gold:#f4c5ab;--gold-dim:#e7a98c;--rose:#f09ca4;--ivory:#fff7f3;--muted:#ded1d3;--hair:rgba(244,197,171,.4)}body[data-theme="neon"] .hero h1 em{color:#ff56bd}body[data-theme="underground"] .hero::after{background:radial-gradient(circle,rgba(246,201,86,.24),transparent 68%)}body[data-theme="cinematic"] .hero::after{background:radial-gradient(circle,rgba(240,156,164,.3),transparent 68%)}
 @media(max-width:620px){.theme-chooser{padding:30px 16px}.chooser-inner>p{font-size:17px;margin-bottom:22px}.theme-grid{grid-template-columns:1fr;gap:12px}.theme-card{min-height:188px;padding:20px}.theme-card b{margin-bottom:20px}.theme-card h3{font-size:29px}}
 
+/* ---------- maps ---------- */
+.map-link{display:inline-flex;align-items:center;gap:5px;color:inherit;text-decoration:none;border-bottom:1px solid transparent;transition:color .2s,border-color .2s}.map-link:hover,.map-link:focus-visible{color:var(--gold);border-bottom-color:var(--gold);outline:none}.map-link .pin{font:18px/1 var(--util);color:var(--gold);transform:translateY(-1px)}
+
 </style>
 </head>
 <body class="locked">
@@ -268,12 +271,12 @@ body[data-theme="neon"]{--ink:#0c0920;--wine:#171047;--oxblood:#be0065;--plum:#2
     <p>במלון בערך ב-18:15. אל תתכננו יותר מזה — יום ראשון בעיר לא צריך להיות עמוס.</p></div></div>
 
   <div class="slot"><div class="time">20:00</div><div>
-    <h3>ארוחה · <span class="lat">Andrew Edmunds</span></h3>
+    <h3>ארוחה · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Andrew%20Edmunds%20Restaurant%2C%20Soho%2C%20London" target="_blank" rel="noopener"><span class="lat">Andrew Edmunds</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
     <p>בית טאון מהמאה ה-18 בסוהו. נרות, שולחנות צמודים, תפריט כתוב ביד, אפס תיירים. חובה להזמין הרבה מראש.</p></div></div>
 
   <div class="slot"><div class="time">22:30</div><div>
-    <h3>לילה · <span class="lat">Swift Soho</span></h3>
-    <p>יורדים למרתף החשוך — ג'אז חי ווויסקי. אלטרנטיבה: <span class="lat">Bar Termini</span>, עשרים מקומות סה״כ והנגרוני הכי טוב בעיר.</p></div></div>
+    <h3>לילה · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Swift%20Soho%2C%20London" target="_blank" rel="noopener"><span class="lat">Swift Soho</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
+    <p>יורדים למרתף החשוך — ג'אז חי ווויסקי. אלטרנטיבה: <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Bar%20Termini%2C%20Soho%2C%20London" target="_blank" rel="noopener"><span class="lat">Bar Termini</span><span class="pin" aria-label="מיקום במפות">⌖</span></a>, עשרים מקומות סה״כ והנגרוני הכי טוב בעיר.</p></div></div>
 </section>
 
 <!-- WED -->
@@ -282,24 +285,24 @@ body[data-theme="neon"]{--ink:#0c0920;--wine:#171047;--oxblood:#be0065;--plum:#2
   <p class="mood">Green by day, candlelit by night.</p>
 
   <div class="slot"><div class="time">11:00</div><div>
-    <h3><span class="lat">Hampstead Pergola &amp; Hill Garden</span></h3>
+    <h3><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Hampstead%20Pergola%20and%20Hill%20Garden%2C%20London" target="_blank" rel="noopener"><span class="lat">Hampstead Pergola &amp; Hill Garden</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
     <p>קולונדה אדוארדיאנית שהצמחייה בלעה, כמעט תמיד ריקה. אחת הפינות הרומנטיות בעיר ואף תייר לא מגיע אליה.</p></div></div>
 
   <div class="slot"><div class="time">13:00</div><div>
-    <h3><span class="lat">Hampstead Heath</span> · בריכות</h3>
-    <p>שחייה בבריכות הפתוחות — ספטמבר עדיין נעים. צהריים ב-<span class="lat">The Holly Bush</span>, פאב מ-1807 בסמטה.</p></div></div>
+    <h3><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Hampstead%20Heath%2C%20London" target="_blank" rel="noopener"><span class="lat">Hampstead Heath</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> · בריכות</h3>
+    <p>שחייה בבריכות הפתוחות — ספטמבר עדיין נעים. צהריים ב-<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=The%20Holly%20Bush%20Hampstead%2C%20London" target="_blank" rel="noopener"><span class="lat">The Holly Bush</span><span class="pin" aria-label="מיקום במפות">⌖</span></a>, פאב מ-1807 בסמטה.</p></div></div>
 
   <div class="slot" data-private><div class="time">18:00</div><div>
-    <h3><span class="lat">AIRE Ancient Baths</span></h3>
+    <h3><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=AIRE%20Ancient%20Baths%20London" target="_blank" rel="noopener"><span class="lat">AIRE Ancient Baths</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
     <p>מרתף ג'ורג'יאני מואר נרות מתחת לקובנט גארדן: אמבט חם, קר, פושר, אמבט אלף הסילונים, חדר אדים, ולבסוף ציפה באמבט מלח. טלפונים אסורים לחלוטין. קחו <span class="lat">Couples Escape</span> עם עיסוי זוגי באותו חדר.</p></div></div>
 
   <div class="slot"><div class="time">21:30</div><div>
-    <h3>ארוחה · <span class="lat">Cora Pearl</span></h3>
+    <h3>ארוחה · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Cora%20Pearl%20Covent%20Garden%2C%20London" target="_blank" rel="noopener"><span class="lat">Cora Pearl</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
     <p>קרוב, וקרוי על שם קורטיזנה ויקטוריאנית. אחרי המים זה בדיוק הטון הנכון.</p></div></div>
 
   <div class="slot"><div class="time">23:00</div><div>
-    <h3><span class="lat">Nightjar</span></h3>
-    <p>ג'אז חי במרתף בשורדיץ', פעמון בדלת. או <span class="lat">Evans &amp; Peel</span> — נכנסים דרך משרד חקירות, מציגים תיק, והקיר נפתח.</p></div></div>
+    <h3><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Nightjar%20Shoreditch%2C%20London" target="_blank" rel="noopener"><span class="lat">Nightjar</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
+    <p>ג'אז חי במרתף בשורדיץ', פעמון בדלת. או <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Evans%20%26%20Peel%20Detective%20Agency%2C%20London" target="_blank" rel="noopener"><span class="lat">Evans &amp; Peel</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> — נכנסים דרך משרד חקירות, מציגים תיק, והקיר נפתח.</p></div></div>
 </section>
 
 <!-- THU -->
@@ -308,20 +311,20 @@ body[data-theme="neon"]{--ink:#0c0920;--wine:#171047;--oxblood:#be0065;--plum:#2
   <p class="mood">On the water, then underground.</p>
 
   <div class="slot"><div class="time">11:00</div><div>
-    <h3><span class="lat">GoBoat</span> · תעלת ריג'נט</h3>
-    <p>סירה חשמלית פרטית לשעתיים מ-<span class="lat">Kingsland Basin</span>. אתם הקברניטים, בקבוק ופיקניק על הסיפון, שטים דרך <span class="lat">Victoria Park</span>. בלי מדריך ובלי קבוצה.</p></div></div>
+    <h3><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=GoBoat%20London%20Kingsland%20Basin" target="_blank" rel="noopener"><span class="lat">GoBoat</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> · תעלת ריג'נט</h3>
+    <p>סירה חשמלית פרטית לשעתיים מ-<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Kingsland%20Basin%2C%20London" target="_blank" rel="noopener"><span class="lat">Kingsland Basin</span><span class="pin" aria-label="מיקום במפות">⌖</span></a>. אתם הקברניטים, בקבוק ופיקניק על הסיפון, שטים דרך <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Victoria%20Park%2C%20London" target="_blank" rel="noopener"><span class="lat">Victoria Park</span><span class="pin" aria-label="מיקום במפות">⌖</span></a>. בלי מדריך ובלי קבוצה.</p></div></div>
 
   <div class="slot"><div class="time">14:00</div><div>
-    <h3>צהריים · <span class="lat">Café Cecilia</span></h3>
-    <p>על התעלה. או <span class="lat">Bistrotheque</span> — דלת לא מסומנת במחסן בבת'נל גרין.</p></div></div>
+    <h3>צהריים · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Cafe%20Cecilia%2C%20Hackney%2C%20London" target="_blank" rel="noopener"><span class="lat">Café Cecilia</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
+    <p>על התעלה. או <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Bistrotheque%2C%20London" target="_blank" rel="noopener"><span class="lat">Bistrotheque</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> — דלת לא מסומנת במחסן בבת'נל גרין.</p></div></div>
 
   <div class="slot"><div class="time">20:00</div><div>
-    <h3><span class="lat">Sessions Arts Club</span></h3>
+    <h3><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Sessions%20Arts%20Club%2C%20London" target="_blank" rel="noopener"><span class="lat">Sessions Arts Club</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
     <p>אולם נשפים מתקלף בקומה העליונה של בית משפט נטוש בקלרקנוול. תקרות גבוהות, טיח נושר, אור נרות. אחד החללים היפים בלונדון.</p></div></div>
 
   <div class="slot" data-private><div class="time">23:00</div><div>
     <h3>אופציה ללילה</h3>
-    <p>לא לחזור ל-<span class="lat">Le Boudoir</span> — זה אותו מקום של מוצ״ש, ובחמישי היחס פחות טוב לזוגות. אם בכל זאת רוצים משהו: <span class="lat">The Fox Den</span>, ארוחת ערב הדוניסטית ל-24 אורחים עם שף פרטי, או <span class="lat">KK Cabaret</span> של <span class="lat">Killing Kittens</span>. שניהם בהרשמה מראש.</p></div></div>
+    <p>לא לחזור ל-<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Le%20Boudoir%20Club%20London" target="_blank" rel="noopener"><span class="lat">Le Boudoir</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> — זה אותו מקום של מוצ״ש, ובחמישי היחס פחות טוב לזוגות. אם בכל זאת רוצים משהו: <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=The%20Fox%20Den%20London" target="_blank" rel="noopener"><span class="lat">The Fox Den</span><span class="pin" aria-label="מיקום במפות">⌖</span></a>, ארוחת ערב הדוניסטית ל-24 אורחים עם שף פרטי, או <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Killing%20Kittens%20Cabaret%20London" target="_blank" rel="noopener"><span class="lat">KK Cabaret</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> של <span class="lat">Killing Kittens</span>. שניהם בהרשמה מראש.</p></div></div>
 </section>
 
 <!-- FRI -->
@@ -330,19 +333,19 @@ body[data-theme="neon"]{--ink:#0c0920;--wine:#171047;--oxblood:#be0065;--plum:#2
   <p class="mood">Slow burn. Save something for tomorrow.</p>
 
   <div class="slot" data-private><div class="time">11:00</div><div>
-    <h3><span class="lat">Coco de Mer</span> · <span class="lat">Monmouth St</span></h3>
-    <p>הבוטיק הארוטי האייקוני של לונדון. אפשר לקבוע התאמה פרטית. משם סמטאות סוהו ובר הוויסקי הסודי במרתף <span class="lat">Milroy's</span>.</p></div></div>
+    <h3><a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Coco%20de%20Mer%20Monmouth%20Street%2C%20London" target="_blank" rel="noopener"><span class="lat">Coco de Mer</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Monmouth%20Street%2C%20London" target="_blank" rel="noopener"><span class="lat">Monmouth St</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
+    <p>הבוטיק הארוטי האייקוני של לונדון. אפשר לקבוע התאמה פרטית. משם סמטאות סוהו ובר הוויסקי הסודי במרתף <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Milroy%27s%20of%20Soho%2C%20London" target="_blank" rel="noopener"><span class="lat">Milroy's</span><span class="pin" aria-label="מיקום במפות">⌖</span></a>.</p></div></div>
 
   <div class="slot"><div class="time">19:00</div><div>
-    <h3>שקיעה · <span class="lat">Forza Wine</span>, פקהאם</h3>
+    <h3>שקיעה · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Forza%20Wine%20Peckham%2C%20London" target="_blank" rel="noopener"><span class="lat">Forza Wine</span><span class="pin" aria-label="מיקום במפות">⌖</span></a>, פקהאם</h3>
     <p>גג עם נוף לסקייליין, יין טבעי, קהל מקומי לגמרי. השקיעה בערך 19:40 — תגיעו לפני.</p></div></div>
 
   <div class="slot"><div class="time">20:45</div><div>
-    <h3>ארוחה · <span class="lat">Kudu</span></h3>
-    <p>או <span class="lat">Levan</span>. שניהם בטווח הליכה מהגג.</p></div></div>
+    <h3>ארוחה · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Kudu%20Peckham%2C%20London" target="_blank" rel="noopener"><span class="lat">Kudu</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
+    <p>או <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Levan%20Peckham%2C%20London" target="_blank" rel="noopener"><span class="lat">Levan</span><span class="pin" aria-label="מיקום במפות">⌖</span></a>. שניהם בטווח הליכה מהגג.</p></div></div>
 
   <div class="slot"><div class="time">23:00</div><div>
-    <h3>מופע מאוחר · <span class="lat">Ronnie Scott's</span></h3>
+    <h3>מופע מאוחר · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Ronnie%20Scott%27s%20Jazz%20Club%2C%20London" target="_blank" rel="noopener"><span class="lat">Ronnie Scott's</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
     <p>הסט המאוחר, לא המוקדם. חדר קטן וחשוך, וזו הדרך הנכונה לסיים את הערב שלפני.</p></div></div>
 </section>
 
@@ -352,7 +355,7 @@ body[data-theme="neon"]{--ink:#0c0920;--wine:#171047;--oxblood:#be0065;--plum:#2
   <p class="mood">The night the whole trip was built around.</p>
 
   <div class="slot"><div class="time">12:30</div><div>
-    <h3>בראנץ' · <span class="lat">Bistrotheque</span></h3>
+    <h3>בראנץ' · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Bistrotheque%2C%20London" target="_blank" rel="noopener"><span class="lat">Bistrotheque</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
     <p>בראנץ' דראג של סוף שבוע. קליל, קאמפי, מכניס למצב רוח בלי לשרוף אנרגיה.</p></div></div>
 
   <div class="slot"><div class="time">15:00</div><div>
@@ -360,12 +363,12 @@ body[data-theme="neon"]{--ink:#0c0920;--wine:#171047;--oxblood:#be0065;--plum:#2
     <p>לא סעיף מיותר. הטעות הנפוצה של זוגות בטיול היא להגיע שחוקים מיום על הרגליים ולהתרוקן בדיוק כשהערב מתחיל.</p></div></div>
 
   <div class="slot"><div class="time">19:15</div><div>
-    <h3>ארוחה קלה · <span class="lat">Som Saa</span></h3>
-    <p>או <span class="lat">Gunpowder</span> בספיטלפילדס. צלחות קטנות בלבד, כוס אחת. בטן מלאה = ערב מבוזבז.</p></div></div>
+    <h3>ארוחה קלה · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Som%20Saa%20Spitalfields%2C%20London" target="_blank" rel="noopener"><span class="lat">Som Saa</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
+    <p>או <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Gunpowder%20Spitalfields%2C%20London" target="_blank" rel="noopener"><span class="lat">Gunpowder</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> בספיטלפילדס. צלחות קטנות בלבד, כוס אחת. בטן מלאה = ערב מבוזבז.</p></div></div>
 
   <div class="slot"><div class="time">21:00</div><div>
-    <h3>כוס אחת · <span class="lat">Discount Suit Company</span></h3>
-    <p>בר קוקטיילים במרתף של חנות חייטים ישנה ב-<span class="lat">Wentworth St</span>. חמש דקות הליכה מהמועדון — בדיוק המעבר הנכון.</p></div></div>
+    <h3>כוס אחת · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Discount%20Suit%20Company%2C%20London" target="_blank" rel="noopener"><span class="lat">Discount Suit Company</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></h3>
+    <p>בר קוקטיילים במרתף של חנות חייטים ישנה ב-<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Wentworth%20Street%2C%20London" target="_blank" rel="noopener"><span class="lat">Wentworth St</span><span class="pin" aria-label="מיקום במפות">⌖</span></a>. חמש דקות הליכה מהמועדון — בדיוק המעבר הנכון.</p></div></div>
 
   <div class="slot"><div class="time">21:45</div><div>
     <h3><span class="lat">Le Boudoir Club</span> · <span class="lat">KISS</span></h3>
@@ -373,7 +376,7 @@ body[data-theme="neon"]{--ink:#0c0920;--wine:#171047;--oxblood:#be0065;--plum:#2
 
   <div class="slot"><div class="time">03:00</div><div>
     <h3>לישון קרוב</h3>
-    <p>שקלו לישון את הלילה הזה במזרח לונדון. <span class="lat">Leman Locke</span> נמצא ממש על אותו רחוב. לצאת ולהיות במיטה תוך חמש דקות זה הבדל אמיתי אחרי ערב כזה.</p></div></div>
+    <p>שקלו לישון את הלילה הזה במזרח לונדון. <strong>חלופה ל-Leman Locke:</strong> <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Hyatt%20Place%20London%20City%20East%2C%20London" target="_blank" rel="noopener"><span class="lat">Hyatt Place London City East</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> נמצא במרחק הליכה קצר מהמועדון. לצאת ולהיות במיטה תוך חמש דקות זה הבדל אמיתי אחרי ערב כזה.</p></div></div>
 </section>
 
 <!-- SUN -->
@@ -383,7 +386,7 @@ body[data-theme="neon"]{--ink:#0c0920;--wine:#171047;--oxblood:#be0065;--plum:#2
 
   <div class="slot"><div class="time">07:00</div><div>
     <h3>עזיבה</h3>
-    <p>אם ההמראה בבוקר, זה כל היום. אם התפנו שעתיים — <span class="lat">Columbia Road Flower Market</span> נפתח ב-08:00, ריק ומדהים בשעה הזו, וקרואסון בדרך.</p></div></div>
+    <p>אם ההמראה בבוקר, זה כל היום. אם התפנו שעתיים — <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Columbia%20Road%20Flower%20Market%2C%20London" target="_blank" rel="noopener"><span class="lat">Columbia Road Flower Market</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> נפתח ב-08:00, ריק ומדהים בשעה הזו, וקרואסון בדרך.</p></div></div>
 </section>
 
 <!-- CHECKLIST -->
@@ -391,13 +394,13 @@ body[data-theme="neon"]{--ink:#0c0920;--wine:#171047;--oxblood:#be0065;--plum:#2
   <h2>לפני שטסים</h2>
   <p class="lead">כמעט הכל ברשימה הזו נסגר שבועות מראש. סמנו תוך כדי.</p>
   <ul class="check">
-    <li><label><input type="checkbox"><span class="txt">חברות ב-<span class="lat">Le Boudoir</span> — מאושרת בפועל<small>לא רק "נרשמנו". ודאו שקיבלתם אישור לפני שאתם עולים למטוס.</small></span></label></li>
+    <li><label><input type="checkbox"><span class="txt">חברות ב-<a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Le%20Boudoir%20Club%20London" target="_blank" rel="noopener"><span class="lat">Le Boudoir</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> — מאושרת בפועל<small>לא רק "נרשמנו". ודאו שקיבלתם אישור לפני שאתם עולים למטוס.</small></span></label></li>
     <li><label><input type="checkbox"><span class="txt">מייל למועדון<small>פורמט הערב ב-5/9 · הזמנה מראש או דלת · BYOB או בר · קוד לבוש מדויק</small></span></label></li>
     <li><label><input type="checkbox"><span class="txt">דרכונים<small>משמשים שם כהוכחת גיל וכתובת. רישיון ישראלי לא יעבוד.</small></span></label></li>
     <li><label><input type="checkbox"><span class="txt">תלבושות לערב<small>זה לא פטיש — זה קוקטייל־גלאם. ג'ינס נפסל.</small></span></label></li>
-    <li><label><input type="checkbox"><span class="txt">הזמנת <span class="lat">AIRE Ancient Baths</span> — <span class="lat">Couples Escape</span></span></label></li>
-    <li><label><input type="checkbox"><span class="txt">שולחנות: <span class="lat">Andrew Edmunds</span> · <span class="lat">Sessions Arts Club</span> · <span class="lat">Som Saa</span></span></label></li>
-    <li><label><input type="checkbox"><span class="txt">סירה: <span class="lat">GoBoat</span>, שעתיים</span></label></li>
+    <li><label><input type="checkbox"><span class="txt">הזמנת <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=AIRE%20Ancient%20Baths%20London" target="_blank" rel="noopener"><span class="lat">AIRE Ancient Baths</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> — <span class="lat">Couples Escape</span></span></label></li>
+    <li><label><input type="checkbox"><span class="txt">שולחנות: <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Andrew%20Edmunds%20Restaurant%2C%20Soho%2C%20London" target="_blank" rel="noopener"><span class="lat">Andrew Edmunds</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Sessions%20Arts%20Club%2C%20London" target="_blank" rel="noopener"><span class="lat">Sessions Arts Club</span><span class="pin" aria-label="מיקום במפות">⌖</span></a> · <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=Som%20Saa%20Spitalfields%2C%20London" target="_blank" rel="noopener"><span class="lat">Som Saa</span><span class="pin" aria-label="מיקום במפות">⌖</span></a></span></label></li>
+    <li><label><input type="checkbox"><span class="txt">סירה: <a class="map-link" href="https://www.google.com/maps/search/?api=1&query=GoBoat%20London%20Kingsland%20Basin" target="_blank" rel="noopener"><span class="lat">GoBoat</span><span class="pin" aria-label="מיקום במפות">⌖</span></a>, שעתיים</span></label></li>
     <li><label><input type="checkbox"><span class="txt">מזומן ליטרה<small>חלק מהמקומות גובים כניסה או פיקדון במזומן בלבד.</small></span></label></li>
     <li><label><input type="checkbox"><span class="txt">שיחה אחת לפני הדלת<small>מה כן, מה לא, ומילת קוד לעצירה. אחד אומר לא — שנינו יוצאים.</small></span></label></li>
   </ul>
